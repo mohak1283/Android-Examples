@@ -21,18 +21,6 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> activityRule
             = new ActivityTestRule<>(MainActivity.class);
 
-    @Test
-    public void checkingLoginSuccess() {
-
-        onView(withId(R.id.edt_email)).perform(typeText("mohak123@gmail.com"), closeSoftKeyboard());
-
-        onView(withId(R.id.edt_pass)).perform(typeText("mohak1234"), closeSoftKeyboard());
-
-        onView(withId(R.id.btn_login)).perform(click());
-
-        onView(withId(R.id.tv_result)).check(matches(withText("LOGIN SUCCESS!")));
-
-    }
 
     @Test
     public void checkingLoginFailure() {
@@ -46,6 +34,21 @@ public class MainActivityTest {
         onView(withId(R.id.tv_result)).check(matches(withText("LOGIN FAILED")));
 
     }
+
+
+//    @Test
+//    public void checkingLoginSuccess() {
+//
+//        onView(withId(R.id.edt_email)).perform(typeText("mohak123@gmail.com"), closeSoftKeyboard());
+//
+//        onView(withId(R.id.edt_pass)).perform(typeText("mohak1234"), closeSoftKeyboard());
+//
+//        onView(withId(R.id.btn_login)).perform(click());
+//
+//        onView(withId(R.id.tv_result)).check(matches(withText("LOGIN SUCCESS!")));
+//
+//    }
+
 
 
 }
