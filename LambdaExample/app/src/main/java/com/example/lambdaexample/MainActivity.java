@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // -------------- First method --------------- //
-//        btnSecond.setOnClickListener(view -> handleClick(view));
+      // btnSecond.setOnClickListener(view -> handleClick(view));
 
         // -------------- Second Method ------------- //
 //        btnSecond.setOnClickListener(this::handleClick);
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
+@FunctionalInterface
 interface ToastInterface {
-    void createToast(String email, String password);
+     abstract void createToast(String email, String password);
 }
